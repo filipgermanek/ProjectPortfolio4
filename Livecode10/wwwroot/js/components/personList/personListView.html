@@ -1,0 +1,9 @@
+
+<div class="form-check">
+    <input class="form-check-input" id="showDetails" type="checkbox" data-bind="checked: showDetails" />
+    <label class="form-check-label" for="showDetails">Show details</label>
+</div>
+
+<div data-bind="foreach: persons">
+    <div data-bind="component: { name: $parent.currentComponent, params: {person: $data}}"></div>
+</div>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>index</title>
+    <link href="js/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="js/lib/jqcloud2/dist/jqcloud.min.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><span data-bind="text: title"></span></a>
+            
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <button>USER</button>
+        </nav>
+        <div data-bind="component: { name: selectedComponent}"></div>
+        
+        <script data-main="js/main.js" src="js/lib/requirejs/require.js"></script>
+    </div>
+</body>
+</html>

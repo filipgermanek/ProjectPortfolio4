@@ -1,0 +1,14 @@
+﻿<div class="post-table-wrapper container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="score-column">score</th>
+                <th class="title-column">title</th>
+                <th class="date-column">date</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: posts">
+            <tr data-bind="component: { name: $parent.currentComponent, params: {post: $data}}" class="post-list-element-row"></tr>
+        </tbody>
+    </table>
+</div>

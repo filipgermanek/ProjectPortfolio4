@@ -1,0 +1,20 @@
+﻿<div class="bg-warning col-4 mt-1 pb-1">
+    <div>
+        Firstname:
+        <span data-bind="text: firstName"></span>
+    </div>
+    <div>
+        Lastname::
+        <span data-bind="text: lastName"></span>
+    </div>
+    <div>
+        Age::
+        <span data-bind="text: age"></span>
+    </div>
+    <ul data-bind="foreach: pets">
+        <li data-bind="text: $data"></li>
+    </ul>
+    <div class="mt-1">
+        <button class="btn btn-primary btn-sm" data-bind="click: deletePerson">Delete</button>
+    </div>
+</div>

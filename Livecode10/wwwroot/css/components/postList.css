@@ -1,0 +1,23 @@
+﻿.post-table-wrapper {
+    margin-top: 50px;
+}
+.table thead th {
+    border-bottom: none;
+    border-top: none;
+    font-size: 12px;
+    font-weight: 400;
+}
+.table td {
+    font-size: 14px;
+}
+.score-column {
+    width: 10%;
+}
+
+.title-column {
+    width: 75%;
+}
+
+.date-column {
+    width: 15%;
+}
