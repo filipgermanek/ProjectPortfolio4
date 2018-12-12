@@ -1,6 +1,6 @@
 ﻿define(['knockout', 'postman'], function (ko, postman) {
     return function (params) {
-        var title = params.post.title;
+        var title = "dd"; //params.post.title;
         return {
             title
         };

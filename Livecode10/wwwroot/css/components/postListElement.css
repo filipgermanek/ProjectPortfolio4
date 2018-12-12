@@ -1,8 +1,14 @@
 ﻿.post-list-element-row {
  
 }
-.post-list-element-title {
-    color: blue;
+.post-list-element-title, .post-list-element-tag {
+    color: #009DFF;
     cursor: pointer;
 }
+.post-list-element-title {
 
+}
+.post-list-element-tag {
+    color: #77C6F7;
+    font-size: 11px;
+}

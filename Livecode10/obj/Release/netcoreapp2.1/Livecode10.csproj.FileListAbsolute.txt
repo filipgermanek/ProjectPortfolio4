@@ -1,0 +1,13 @@
+/Users/filipgermanek/Desktop/ProjectPortfolio4/Livecode10/bin/Release/netcoreapp2.1/Livecode10.deps.json
+/Users/filipgermanek/Desktop/ProjectPortfolio4/Livecode10/bin/Release/netcoreapp2.1/Livecode10.runtimeconfig.json
+/Users/filipgermanek/Desktop/ProjectPortfolio4/Livecode10/bin/Release/netcoreapp2.1/Livecode10.runtimeconfig.dev.json
+/Users/filipgermanek/Desktop/ProjectPortfolio4/Livecode10/bin/Release/netcoreapp2.1/Livecode10.dll
+/Users/filipgermanek/Desktop/ProjectPortfolio4/Livecode10/bin/Release/netcoreapp2.1/Livecode10.pdb
+/Users/filipgermanek/Desktop/ProjectPortfolio4/Livecode10/obj/Release/netcoreapp2.1/Livecode10.csproj.CoreCompileInputs.cache
+/Users/filipgermanek/Desktop/ProjectPortfolio4/Livecode10/obj/Release/netcoreapp2.1/Livecode10.RazorAssemblyInfo.cache
+/Users/filipgermanek/Desktop/ProjectPortfolio4/Livecode10/obj/Release/netcoreapp2.1/Livecode10.RazorAssemblyInfo.cs
+/Users/filipgermanek/Desktop/ProjectPortfolio4/Livecode10/obj/Release/netcoreapp2.1/Livecode10.AssemblyInfoInputs.cache
+/Users/filipgermanek/Desktop/ProjectPortfolio4/Livecode10/obj/Release/netcoreapp2.1/Livecode10.AssemblyInfo.cs
+/Users/filipgermanek/Desktop/ProjectPortfolio4/Livecode10/obj/Release/netcoreapp2.1/Livecode10.RazorTargetAssemblyInfo.cache
+/Users/filipgermanek/Desktop/ProjectPortfolio4/Livecode10/obj/Release/netcoreapp2.1/Livecode10.dll
+/Users/filipgermanek/Desktop/ProjectPortfolio4/Livecode10/obj/Release/netcoreapp2.1/Livecode10.pdb

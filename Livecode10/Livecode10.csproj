@@ -15,6 +15,11 @@
     <Folder Include="wwwroot\js\components\post\" />
     <Folder Include="wwwroot\js\components\postListElement\" />
     <Folder Include="wwwroot\css\components\" />
+    <Folder Include="wwwroot\js\components\tags\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\js\components\commentList\commentList.js" />
+    <Content Remove="wwwroot\js\components\commentListElement\commentListElement.js" />
+  </ItemGroup>
 </Project>
