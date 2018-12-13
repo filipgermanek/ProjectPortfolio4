@@ -1,0 +1,13 @@
+﻿<div class="comment-table-wrapper container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="score-column">score</th>
+                <th class="title-column">title</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: comments">
+            <tr data-bind="component: { name: $parent.currentComponent, params: {comments: $data}}" class="comment-list-element-row"></tr>
+        </tbody>
+    </table>
+</div>
