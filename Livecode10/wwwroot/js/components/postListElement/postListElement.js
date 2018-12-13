@@ -4,11 +4,8 @@
         var score = params.post.score;
         var d = new Date(params.post.creationDate);
         var date = d ? d.getDate() + "-" + d.getMonth() + "-" + d.getFullYear() : '';
-
-        var onPostClick = function(p) {
-            console.log("p", p);
-
-        }
+        console.log("params in single post:", params)
+        var onPostClick = params.onPostClick;
         return {
             score,
             title,

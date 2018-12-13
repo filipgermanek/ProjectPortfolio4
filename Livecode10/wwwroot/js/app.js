@@ -4,11 +4,18 @@
     
     ];
     
-    var selectedPost = ko.observable(null);
-    var selectedComponent = ko.observable("post");
+    var selectedComponent = ko.observable("post-list");
     var onPostClick = function (post) {
-        selectedPost(post);
+        console.log("post clicked", post)
+//fetch post here and once its fetched change component and pass post to it
         selectedComponent("post");
+    }
+    var navigateHome = function () {
+        selectedComponent("post-list");
+    }
+    var navigateToUserProfile = function() {
+console.log("person");
+        selectedComponent('person')
     }
 
     postman.subscribe("changeMenu", function(menuName) {
@@ -19,9 +26,10 @@
     }) ;
 
     return {
-        title,
         selectedComponent,
-        selectedPost,
-        onPostClick
+        onPostClick,
+        navigateHome,
+        selectedComponent,
+        navigateToUserProfile
     };
 });
