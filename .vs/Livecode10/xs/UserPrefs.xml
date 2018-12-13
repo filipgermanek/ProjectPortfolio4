@@ -1,15 +1,17 @@
 ﻿<Properties StartupConfiguration="{6F7248A5-AE60-447D-98CE-0249CF5946DE}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Livecode10/wwwroot/index.html">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Livecode10/wwwroot/js/components/post/postView.html">
     <Files>
-      <File FileName="Livecode10/wwwroot/js/components/person/personView.html" Line="46" Column="51" />
-      <File FileName="Livecode10/wwwroot/css/components/person.css" Line="20" Column="23" />
-      <File FileName="Livecode10/wwwroot/js/main.js" Line="68" Column="5" />
-      <File FileName="Livecode10/wwwroot/js/components/postListElement/postListElementView.html" Line="5" Column="26" />
-      <File FileName="Livecode10/wwwroot/js/components/post/postView.html" Line="22" Column="9" />
-      <File FileName="Livecode10/wwwroot/js/components/postList/postListView.html" Line="1" Column="1" />
-      <File FileName="Livecode10/wwwroot/js/components/person/person.js" Line="7" Column="40" />
-      <File FileName="../ProjectPortfolio2/ProjectPortfolio2/DatabaseContext.cs" Line="53" Column="98" />
-      <File FileName="Livecode10/wwwroot/index.html" Line="22" Column="83" />
+      <File FileName="Livecode10/wwwroot/js/components/postList/postList.js" Line="10" Column="24" />
+      <File FileName="Livecode10/wwwroot/js/components/postListElement/postListElement.js" Line="8" Column="46" />
+      <File FileName="Livecode10/wwwroot/js/components/postList/postListView.html" Line="11" Column="43" />
+      <File FileName="Livecode10/wwwroot/js/components/postListElement/postListElementView.html" Line="5" Column="41" />
+      <File FileName="Livecode10/wwwroot/js/app.js" Line="17" Column="23" />
+      <File FileName="Livecode10/wwwroot/index.html" Line="18" Column="75" />
+      <File FileName="Livecode10/wwwroot/css/site.css" Line="14" Column="21" />
+      <File FileName="Livecode10/wwwroot/js/main.js" Line="66" Column="23" />
+      <File FileName="Livecode10/wwwroot/js/components/person/person.js" Line="1" Column="1" />
+      <File FileName="Livecode10/wwwroot/js/components/person/personView.html" Line="1" Column="1" />
+      <File FileName="Livecode10/wwwroot/js/components/post/postView.html" Line="3" Column="58" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Livecode10 PreferredExecutionTarget="MonoDevelop.Default" />

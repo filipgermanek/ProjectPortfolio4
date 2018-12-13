@@ -9,17 +9,18 @@
 <body>
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#"><span data-bind="text: title"></span></a>
+            <div class="navbar-brand" data-bind="click: navigateHome"></div>
             
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search" aria-label="Search">
 
             </form>
-            <button class="profile-button">My Profile</button>
+            <button class="profile-button" data-bind="click: navigateToUserProfile">My Profile</button>
         </nav>
-        <div data-bind="component: { name: selectedComponent, params:{onPostClick: onPostClick}}"></div>
+        <div data-bind="component: { name: selectedComponent, onPostClick: onPostClick}"></div>
         
         <script data-main="js/main.js" src="js/lib/requirejs/require.js"></script>
     </div>
 </body>
 </html>
+        <div data-bind="component: { name: selectedComponent, params: {onPostClick: onPostClick}}"></div>

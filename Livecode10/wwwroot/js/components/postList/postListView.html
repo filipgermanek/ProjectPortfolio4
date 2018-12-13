@@ -9,7 +9,7 @@
             </tr>
         </thead>
         <tbody data-bind="foreach: posts">
-            <tr data-bind="component: { name: $parent.currentComponent, params: {post: $data}}" class="post-list-element-row"></tr>
+            <tr data-bind="component: { name: $parent.currentComponent, params: {post: $data, onPostClick: $parent.onPostClick}}" class="post-list-element-row"></tr>
         </tbody>
     </table>
 </div>

@@ -7,9 +7,10 @@
             console.log("data", data);
             posts(data.items);
         });
-
+        var onPostClick = params.onPostClick;
         return {
             posts,
+            onPostClick,
             currentComponent
         };
     };
