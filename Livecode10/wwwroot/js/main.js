@@ -65,20 +65,12 @@ require(['jquery', 'knockout', 'jqcloud'], function($, ko) {
 
 // register components
 require(['knockout'], function(ko) {
-    ko.components.register("person-list", {
-        viewModel: { require: 'components/personList/personList'},
-        template: { require: 'text!components/personList/personListView.html'}
-    });
 
     ko.components.register("person", {
         viewModel: { require: 'components/person/person' },
         template: { require: 'text!components/person/personView.html' }
     });
 
-    ko.components.register("person-details", {
-        viewModel: { require: 'components/person/personDetails' },
-        template: { require: 'text!components/person/personDetailsView.html' }
-    });
 
     ko.components.register("cloud", {
         viewModel: { require: 'components/cloud/cloud' },
