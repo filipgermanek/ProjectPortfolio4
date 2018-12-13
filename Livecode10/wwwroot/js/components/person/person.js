@@ -6,15 +6,18 @@
         var age = params.person.age;
 
         var deletePerson = function(p) {
-            postman.publish("deletePerson", p.id);
-        };
+        postman.publish("deletePerson", p.id);
+    
+    };
 
         return {
+
             id,
             firstName,
             lastName,
             age,
             deletePerson
+
         };
     };
 });

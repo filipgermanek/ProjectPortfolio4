@@ -7,7 +7,7 @@
 
     var selectedMenu = ko.observable(menuItems[0]);
     var selectedPost = ko.observable(null);
-    var selectedComponent = ko.observable("post-list");
+    var selectedComponent = ko.observable("person");
     var isActive = function(menu) {
         return selectedMenu() === menu ? "active" : "";
     };

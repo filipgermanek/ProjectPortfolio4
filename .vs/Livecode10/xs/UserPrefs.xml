@@ -1,5 +1,13 @@
 ﻿<Properties StartupConfiguration="{6F7248A5-AE60-447D-98CE-0249CF5946DE}|Default">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Livecode10/wwwroot/css/site.css">
+    <Files>
+      <File FileName="Livecode10/wwwroot/js/main.js" Line="104" Column="5" />
+      <File FileName="Livecode10/wwwroot/js/components/person/personView.html" Line="4" Column="16" />
+      <File FileName="Livecode10/wwwroot/css/components/person.css" Line="8" Column="2" />
+      <File FileName="Livecode10/wwwroot/css/components/components.css" Line="3" Column="27" />
+      <File FileName="Livecode10/wwwroot/css/site.css" Line="5" Column="8" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Livecode10 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

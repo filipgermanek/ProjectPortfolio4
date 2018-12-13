@@ -98,7 +98,10 @@ require(['knockout'], function(ko) {
     ko.components.register("post", {
         viewModel: {require: 'components/post/post'},
         template: {require: 'text!components/post/postView.html'}
-    })
+        })
+
+
+       
 });
 
 // start application
