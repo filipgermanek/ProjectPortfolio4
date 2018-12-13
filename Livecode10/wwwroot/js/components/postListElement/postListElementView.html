@@ -1,4 +1,6 @@
-﻿<td class="score-column">1</td>
+﻿<td  class="score-column">
+    <div data-bind="text: score" class="grey score-wrapper"></div>
+</td>
 <td class="title-column">
     <span data-bind="text: title, click: onPostClick" class=" post-list-element-title"></span>
     <div>
@@ -6,5 +8,8 @@
         <span class="post-list-element-tag">JavaScript</span>
     </div>
 </td>
-<td class="date-column">11-12-2018</td>
+<td class="date-column">
+    <div data-bind="text: date" class="grey date-wrapper"></div>
+</td>
+<td><div class="marked-outline"></div></td>
 

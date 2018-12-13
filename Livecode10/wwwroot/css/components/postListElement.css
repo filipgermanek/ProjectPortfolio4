@@ -1,14 +1,22 @@
-﻿.post-list-element-row {
- 
-}
-.post-list-element-title, .post-list-element-tag {
+﻿.post-list-element-title {
     color: #009DFF;
     cursor: pointer;
-}
-.post-list-element-title {
-
 }
 .post-list-element-tag {
     color: #77C6F7;
     font-size: 11px;
+    cursor: pointer;
 }
+.date-wrapper, .score-wrapper {
+    padding-top: 10px;
+}
+.marked-outline, marked-filled {
+    margin-top: 3px;
+    width: 32px;
+    height: 32px;
+}
+.marked-outline {
+    background-image: url('../../images/outline-star.svg');
+    background-size: contain;
+}
+

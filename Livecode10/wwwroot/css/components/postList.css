@@ -2,6 +2,7 @@
     margin-top: 50px;
 }
 .table thead th {
+    color: #959595;
     border-bottom: none;
     border-top: none;
     font-size: 12px;

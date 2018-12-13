@@ -11511,13 +11511,13 @@
       "projectName": "Livecode10",
       "projectPath": "/Users/filipgermanek/Desktop/ProjectPortfolio4/Livecode10/Livecode10.csproj",
       "packagesPath": "/Users/filipgermanek/.nuget/packages/",
-      "outputPath": "/Users/filipgermanek/Desktop/ProjectPortfolio4/Livecode10/obj/",
+      "outputPath": "/Users/filipgermanek/Desktop/ProjectPortfolio4/Livecode10/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/filipgermanek/.nuget/NuGet/NuGet.Config"
+        "/Users/filipgermanek/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
@@ -11542,8 +11542,7 @@
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.1.1, )",
-            "autoReferenced": true
+            "version": "[2.1.1, )"
           },
           "Microsoft.AspNetCore.Razor.Design": {
             "suppressParent": "All",
@@ -11551,6 +11550,7 @@
             "version": "[2.1.2, )"
           },
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
