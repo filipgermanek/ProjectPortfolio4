@@ -1,8 +1,15 @@
 ﻿<Properties StartupConfiguration="{6F7248A5-AE60-447D-98CE-0249CF5946DE}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Livecode10/wwwroot/css/site.css">
     <Files>
-      <File FileName="Livecode10/wwwroot/js/components/person/personView.html" Line="20" Column="29" />
-      <File FileName="Livecode10/wwwroot/css/site.css" Line="38" Column="74" />
+      <File FileName="Livecode10/wwwroot/js/components/post/post.js" Line="11" Column="22" />
+      <File FileName="Livecode10/wwwroot/js/components/post/postView.html" Line="3" Column="58" />
+      <File FileName="Livecode10/wwwroot/js/app.js" Line="25" Column="20" />
+      <File FileName="Livecode10/wwwroot/js/components/postList/postList.js" Line="9" Column="12" />
+      <File FileName="Livecode10/wwwroot/js/services/dataService.js" Line="14" Column="6" />
+      <File FileName="Livecode10/wwwroot/js/components/person/personDetails.js" Line="1" Column="1" />
+      <File FileName="Livecode10/wwwroot/js/components/person/person.js" Line="1" Column="1" />
+      <File FileName="Livecode10/wwwroot/js/components/postListElement/postListElement.js" Line="6" Column="78" />
+      <File FileName="Livecode10/wwwroot/index.html" Line="20" Column="62" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Livecode10 PreferredExecutionTarget="MonoDevelop.Default" />

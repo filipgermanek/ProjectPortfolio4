@@ -1,25 +1,20 @@
 ﻿define(['jquery'], function ($) {
-    var getPersons = function(callback) {
-        $.getJSON('api/persons', function(data) {
-            callback(data);
-        });
-    };
-
-    var getWords = function (callback) {
-        $.getJSON('api/words', function (data) {
-            callback(data);
-        });
-    };
 
     var getPosts = function (callback) {
-        $.getJSON('api/posts', function (data) {
+        $.getJSON('http://localhost:5002/api/posts', {contentType: 'application/json'}, function (data) {
+            console.log("data posts", data)
             callback(data);
         });
     };
 
+    var getPost = function (postId, callback) {
+        $.getJSON('http://localhost:5002/api/posts/' + postId, {contentType: 'application/json'}, function (data) {
+            callback(data);
+        });
+    }
+
     return {
-        getPersons,
-        getWords,
-        getPosts
+        getPosts,
+getPost
     };
 });

@@ -16,10 +16,16 @@
     <Folder Include="wwwroot\js\components\postListElement\" />
     <Folder Include="wwwroot\css\components\" />
     <Folder Include="wwwroot\js\components\tags\" />
+    <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Remove="wwwroot\js\components\commentList\commentList.js" />
     <Content Remove="wwwroot\js\components\commentListElement\commentListElement.js" />
+    <Content Remove="wwwroot\images\outline-star.svg" />
+    <Content Remove="wwwroot\images\filled-star.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Domain\Post.cs" />
   </ItemGroup>
 </Project>
