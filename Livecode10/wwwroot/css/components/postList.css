@@ -1,5 +1,6 @@
-﻿.post-table-wrapper {
-    margin-top: 50px;
+﻿.column {
+    float: left;
+    width: 33.33%;
 }
 .table thead th {
     color: #959595;
@@ -13,12 +14,20 @@
 }
 .score-column {
     width: 10%;
+
 }
 
-.title-column {
-    width: 75%;
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-.date-column {
-    width: 15%;
+.remove-margin-sites {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+
 }

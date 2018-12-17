@@ -26,3 +26,17 @@
 /Users/filipgermanek/Desktop/ProjectPortfolio4/Livecode10/obj/Debug/netcoreapp2.1/Livecode10.RazorTargetAssemblyInfo.cache
 /Users/filipgermanek/Desktop/ProjectPortfolio4/Livecode10/obj/Debug/netcoreapp2.1/Livecode10.dll
 /Users/filipgermanek/Desktop/ProjectPortfolio4/Livecode10/obj/Debug/netcoreapp2.1/Livecode10.pdb
+/Users/nicolaielhojnielsen/GitHub Kraken Projects/ProjectPortfolio4/Livecode10/bin/Debug/netcoreapp2.1/Livecode10.deps.json
+/Users/nicolaielhojnielsen/GitHub Kraken Projects/ProjectPortfolio4/Livecode10/bin/Debug/netcoreapp2.1/Livecode10.runtimeconfig.json
+/Users/nicolaielhojnielsen/GitHub Kraken Projects/ProjectPortfolio4/Livecode10/bin/Debug/netcoreapp2.1/Livecode10.runtimeconfig.dev.json
+/Users/nicolaielhojnielsen/GitHub Kraken Projects/ProjectPortfolio4/Livecode10/bin/Debug/netcoreapp2.1/Livecode10.dll
+/Users/nicolaielhojnielsen/GitHub Kraken Projects/ProjectPortfolio4/Livecode10/bin/Debug/netcoreapp2.1/Livecode10.pdb
+/Users/nicolaielhojnielsen/GitHub Kraken Projects/ProjectPortfolio4/Livecode10/obj/Debug/netcoreapp2.1/Livecode10.csprojAssemblyReference.cache
+/Users/nicolaielhojnielsen/GitHub Kraken Projects/ProjectPortfolio4/Livecode10/obj/Debug/netcoreapp2.1/Livecode10.csproj.CoreCompileInputs.cache
+/Users/nicolaielhojnielsen/GitHub Kraken Projects/ProjectPortfolio4/Livecode10/obj/Debug/netcoreapp2.1/Livecode10.RazorAssemblyInfo.cache
+/Users/nicolaielhojnielsen/GitHub Kraken Projects/ProjectPortfolio4/Livecode10/obj/Debug/netcoreapp2.1/Livecode10.RazorAssemblyInfo.cs
+/Users/nicolaielhojnielsen/GitHub Kraken Projects/ProjectPortfolio4/Livecode10/obj/Debug/netcoreapp2.1/Livecode10.AssemblyInfoInputs.cache
+/Users/nicolaielhojnielsen/GitHub Kraken Projects/ProjectPortfolio4/Livecode10/obj/Debug/netcoreapp2.1/Livecode10.AssemblyInfo.cs
+/Users/nicolaielhojnielsen/GitHub Kraken Projects/ProjectPortfolio4/Livecode10/obj/Debug/netcoreapp2.1/Livecode10.RazorTargetAssemblyInfo.cache
+/Users/nicolaielhojnielsen/GitHub Kraken Projects/ProjectPortfolio4/Livecode10/obj/Debug/netcoreapp2.1/Livecode10.dll
+/Users/nicolaielhojnielsen/GitHub Kraken Projects/ProjectPortfolio4/Livecode10/obj/Debug/netcoreapp2.1/Livecode10.pdb
