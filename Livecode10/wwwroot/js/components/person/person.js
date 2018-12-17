@@ -1,22 +1,25 @@
-﻿define(['knockout', 'postman'], function (ko, postman) {
+﻿define(['knockout', 'postman', 'dataService'], function (ko, postman, ds) {
     return function (params) {
-        var id = ""//params.person.id;
-        var firstName =""// params.person.firstName;
-        var lastName = ""//params.person.lastName;
-        var age = ""//params.person.age;
+        var userId = 1;
+        var name = ko.observable();
+        var location = ko.observable();
+        var email = ko.observable();
+        var creationDate = ko.observable();
         var postListName = 'post-list';
-
-var onPostClick = params.onPostClick;
-
+        var onPostClick = params.onPostClick;
+        ds.getUser(userId, function(data) {
+            name(data.name);
+            location(data.location);
+            email(data.email);
+            creationDate(data.creationDate);
+        });
         return {
-
-onPostClick,
-            id,
-            firstName,
-            lastName,
-            age,
-           postListName
-         
+            onPostClick,
+            name,
+            location,
+            postListName,
+            email,
+            creationDate
         };
     };
 });

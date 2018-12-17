@@ -46,3 +46,18 @@
 .grey {
     color: #646464;
 }
+
+.marked-outline, .marked-filled {
+    width: 32px;
+    height: 32px;
+}
+
+.marked-outline {
+    background-image: url('../../images/outline-star.svg');
+    background-size: contain;
+}
+
+.marked-filled {
+    background-image: url('../../images/filled-star.svg');
+    background-size: contain;
+}

@@ -7,13 +7,14 @@
         });
     };
 
-    var getPost = function (postId, callback) {
-        $.getJSON('http://localhost:5002/api/posts/' + postId, {contentType: 'application/json'}, function (data) {
+    var getPost = function (postLink, callback) {
+        $.getJSON(postLink, {contentType: 'application/json'}, function (data) {
             callback(data);
         });
     }
 
     var getUser = function (userId, callback) {
+console.log("getting user", userId);
         $.getJSON('http://localhost:5002/api/users/' + userId, {contentType: 'application/json'}, function (data) {
             callback(data);
         });
@@ -37,6 +38,12 @@
         });
     }
 
+    var getAnnotatedPosts = function (userId, callback) {
+         $.getJSON('http://localhost:5002/api/users/' + userId + '/marked_posts', {contentType: 'application/json'}, function (data) {
+            callback(data);
+        });
+    }
+
 
     return {
         getPosts,
@@ -44,6 +51,7 @@
         getUser,
         getPostTags,
         getUserSearchHistory,
-        searchPosts
+        searchPosts,
+        getAnnotatedPosts
     };
 });

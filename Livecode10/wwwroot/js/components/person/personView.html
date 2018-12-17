@@ -8,17 +8,17 @@
 
         <div class="col-sm padding-bottom">
             <p class="remove-margin-bottom grey">USERNAME</p>
-            <h3 class="blue">mrQuestions</h3>
+            <h3 class="blue" data-bind="text: name"></h3>
         </div>
 
         <div class="col-sm padding-bottom">
             <p class="remove-margin-bottom grey">LOCATION</p>
-            <h3 class="blue">Sri Lanka</h3>
+            <h3 class="blue" data-bind="text: location" ></h3>
         </div>
 
         <div class="col-sm padding-bottom">
-            <p class="remove-margin-bottom grey">PHONE</p>
-            <h3 class="blue">+49 4949 43894</h3>
+            <p class="remove-margin-bottom grey">EMAIL</p>
+            <h3 class="blue" data-bind="text: email"></h3>
         </div>
 
     </div>
@@ -27,18 +27,8 @@
 <div class="container-fluid padding-bottom">
     <div class="row">
         <div class="col-sm">
-            <p class="remove-margin-bottom grey">ADRESS</p>
-            <h3 class="blue">Hyde Park 8</h3>
-
-        </div>
-        <div class="col-sm">
-            <p class="remove-margin-bottom grey">FULL NAME</p>
-            <h3 class="blue">Peter Parker</h3>
-        </div>
-
-        <div class="col-sm">
             <p class="remove-margin-bottom grey">CREATION DATE</p>
-            <h3 class="blue">15-04-2001</h3>
+            <h3 class="blue" data-bind="text: creationDate"></h3>
         </div>
     </div>
 </div>
@@ -48,7 +38,7 @@
 
 
 
-<div data-bind="component: {name: postListName, params:{onPostClick: onPostClick}}">
+<div data-bind="component: {name: postListName, params:{onPostClick: onPostClick, userId: 1}}">
 
 
 </div>

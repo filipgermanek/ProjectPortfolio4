@@ -3,10 +3,17 @@
         var posts = ko.observableArray();
         var currentComponent = ko.observable("post-list-element");
         console.log("params in list", params)
-        ds.getPosts(function(data) {
-            console.log("data", data);
-            posts(data.items);
-        });
+        if (params.userId) {
+             ds.getAnnotatedPosts(params.userId, function(data) {
+                console.log("data", data);
+                posts(data.items);
+            });
+        } else {
+             ds.getPosts(function(data) {
+                posts(data.items);
+            });
+        }
+       
         var onPostClick = params.onPostClick;
         return {
             posts,

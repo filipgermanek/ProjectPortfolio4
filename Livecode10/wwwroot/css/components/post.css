@@ -7,6 +7,12 @@
     margin: 15px 0;
     font-size: 21px;
     padding-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.post-title-value {
+    margin-right: 10px;
 }
 .description {
     font-size: 14px;
@@ -46,4 +52,5 @@
 .comment-date {
     font-size: 10px;
 }
+
 
