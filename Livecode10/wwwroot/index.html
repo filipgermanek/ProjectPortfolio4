@@ -17,10 +17,9 @@
             </form>
             <button class="profile-button" data-bind="click: navigateToUserProfile">My Profile</button>
         </nav>
-        <div data-bind="component: { name: selectedComponent, onPostClick: onPostClick}"></div>
+        <div data-bind="component: { name: selectedComponent, params: {onPostClick: onPostClick}}"></div>
         
         <script data-main="js/main.js" src="js/lib/requirejs/require.js"></script>
     </div>
 </body>
 </html>
-        <div data-bind="component: { name: selectedComponent, params: {onPostClick: onPostClick}}"></div>
