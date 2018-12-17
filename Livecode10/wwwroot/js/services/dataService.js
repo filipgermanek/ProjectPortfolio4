@@ -13,8 +13,37 @@
         });
     }
 
+    var getUser = function (userId, callback) {
+        $.getJSON('http://localhost:5002/api/users/' + userId, {contentType: 'application/json'}, function (data) {
+            callback(data);
+        });
+    }
+
+    var getPostTags = function (postId, callback) {
+        $.getJSON('http://localhost:5002/api/posts/' + postId + '/tags', {contentType: 'application/json'}, function (data) {
+            callback(data);
+        });
+    }
+
+    var getUserSearchHistory = function (userId, callback) {
+        $.getJSON('http://localhost:5002/api/users/' + userId + 'search_history', {contentType: 'application/json'}, function (data) {
+            callback(data);
+        });
+    }
+
+    var searchPosts = function (userId, callback) {
+        $.getJSON('http://localhost:5002/api/posts/' + searchText, {contentType: 'application/json'}, function (data) {
+            callback(data);
+        });
+    }
+
+
     return {
         getPosts,
-getPost
+        getPost,
+        getUser,
+        getPostTags,
+        getUserSearchHistory,
+        searchPosts
     };
 });

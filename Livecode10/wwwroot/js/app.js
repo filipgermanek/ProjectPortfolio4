@@ -1,8 +1,5 @@
 ﻿define(['knockout', 'postman'], function (ko, postman) { 
     var title = "TODO TITLE";
-    var menuItems = [
-    
-    ];
     
     var selectedComponent = ko.observable("post-list");
     var onPostClick = function (post) {
