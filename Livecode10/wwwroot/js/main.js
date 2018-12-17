@@ -94,11 +94,12 @@ require(['knockout'], function(ko) {
     ko.components.register("comment-list-element", {
         viewModel: {require: 'components/commentListElement/commentListElement'},
         template: {require: 'text!components/commentListElement/commentListElementView.html'}
-        })
+        });
     ko.components.register("post", {
         viewModel: {require: 'components/post/post'},
         template: {require: 'text!components/post/postView.html'}
-    })
+        });
+
 
    
 });

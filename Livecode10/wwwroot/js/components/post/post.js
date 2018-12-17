@@ -1,16 +1,24 @@
 ﻿define(['knockout', 'dataService', 'postman'], function (ko, ds, postman) {
     return function (params) {
-        var post = ko.observable();
-        var postId = 13649012;
-        var title = "testttt", body;
-        ds.getPost(postId, function(data) {
-            console.log("data post", data);
-            post(data);
-        });
-       // title = post.title;
-       // body = post.body;
+        var title = params.postTitle;
+        var score = params.postScore;
+        var body = params.postBody;
+        var dateRaw = new Date(params.postCreationDate);
+console.log("dateRaw", dateRaw, "cr", params.postCreationDate)
+        var creationDate = dateRaw.getDate() + "/" + dateRaw.getMonth() + "/" + dateRaw.getFullYear()
+        var comments = params.postComments;
+        var tags = params.postTags;
+        var isAnnotated = params.isPostAnnotated;
+        var postAnnotationText = params.postAnnotationText;
         return {
-            title
+            title,
+            score,
+            body,
+            creationDate,
+            comments,
+            tags,
+            isAnnotated,
+            postAnnotationText
         };
     };
 });

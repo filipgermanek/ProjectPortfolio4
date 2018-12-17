@@ -12,11 +12,5 @@
 }
 .marked-outline, marked-filled {
     margin-top: 3px;
-    width: 32px;
-    height: 32px;
-}
-.marked-outline {
-    background-image: url('../../images/outline-star.svg');
-    background-size: contain;
 }
 
