@@ -31,11 +31,19 @@
         });
     }
 
+    var searchPosts = function (userId, callback) {
+        $.getJSON('http://localhost:5002/api/posts/' + searchText, {contentType: 'application/json'}, function (data) {
+            callback(data);
+        });
+    }
+
+
     return {
         getPosts,
         getPost,
         getUser,
         getPostTags,
-        getUserSearchHistory
+        getUserSearchHistory,
+        searchPosts
     };
 });
