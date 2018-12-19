@@ -1,23 +1,32 @@
 ﻿define(['knockout', 'postman', 'dataService'], function (ko, postman, ds) {
     return function (params) {
-        var annotationText = ko.observable();
+        var annotationText = params.annotationText;
+        var isAlreadyAnnotated = params.isAnnotated();
+        var postId = params.postId;
+        var postTitle = params.title;
         var onCancel = function() {
             params.closeModal();
         }
         var onSave = function() {
-            //TODO
-            if (true) {
-                ds.markPost(1, params.postId(), annotationText(), function(data) {
-                    console.log("callback in modal", data);
-                });
+            if (isAlreadyAnnotated()) {
+                var onSuccess = params.onMarkedPostEdit;
+                ds.editMarkedPost(1, params.postId(), annotationText(), onSuccess);
             } else {
-
+                var onSuccess = params.onPostMark;
+                ds.markPost(1, params.postId(), annotationText(), onSuccess);
             }
 
         }
+        var onUnmark = function() {
+            ds.unmarkPost(1, params.postId(), annotationText(), params.onUnmarkPost());
+        }
         return {
             onCancel,
-            onSave
+            onSave,
+            onUnmark,
+            isAlreadyAnnotated,
+            postTitle,
+            annotationText
         };
     };
 });

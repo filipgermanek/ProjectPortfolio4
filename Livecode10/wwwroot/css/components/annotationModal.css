@@ -12,13 +12,14 @@
     flex-direction: column;
     padding: 10px;
     justify-content: space-between;
+    border-radius: 8px;
 }
 .annotation-modal-buttons-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 }
-.annotation-modal-save-button {
+.annotation-modal-button {
     margin-left: 8px;
 }
 .annotation-modal-textarea {

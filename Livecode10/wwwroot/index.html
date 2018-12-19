@@ -22,7 +22,8 @@
         <div class="post-table-component-wrapper" data-bind="component: { name: selectedComponent,
             params: {onPostClick: onPostClick,
                     onAnnotatePostClick: onAnnotatePostClick,
-                    postTitle: postTitle,
+                    postId,
+                    postTitle,
                     postScore,
                     postBody,
                     postCreationDate,
@@ -30,11 +31,19 @@
                     postTags,
                     postAnswers,
                     isPostAnnotated,
+                    isntPostAnnotated,
                     postAnnotationText,
                     searchResults}}"
         ></div>
         <div data-bind="if: showModal">
-            <div data-bind="component: {name: selectedModal, params: {postId: annotateToPostId, postTitle:annotateToPostTitle, closeModal: closeModal}}"></div>
+            <div data-bind="component: {name: selectedModal, params: {postId: annotateToPostId,
+                postTitle:annotateToPostTitle,
+                isAnnotated: annotateToPostIsAnnotated,
+                annotationText: annotateToPostAnnotationText,
+                onPostMark,
+                onMarkedPostEdit,
+                onUnmarkPost,
+                closeModal: closeModal}}"></div>
         </div>
 
         <script data-main="js/main.js" src="js/lib/requirejs/require.js"></script>
