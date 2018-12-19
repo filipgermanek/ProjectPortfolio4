@@ -115,6 +115,6 @@ require(['knockout'], function(ko) {
 });
 
 // start application
-require(['knockout', 'app', 'jqcloud'], function(ko, app) {
+require(['knockout', 'app'], function(ko, app) {
     ko.applyBindings(app);
 });

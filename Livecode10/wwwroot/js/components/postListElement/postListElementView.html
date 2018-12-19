@@ -1,10 +1,13 @@
 ﻿<td  class="score-column">
-    <div data-bind="text: score" class="grey col-text-wrapper"></div>
+    <div data-bind="text: score" class="grey"></div>
 </td>
 <td class="title-column">
-    <div data-bind="text: title, click: onPostClick" class="post-list-element-title col-text-wrapper"></div>
+    <div class="title-column-values-wrapper">
+        <div data-bind="text: title, click: onPostClick" class="post-list-element-title "></div>
+        <div data-bind="visible: isAnswer" class="isAnswer-indicator grey">(Answer)</div>
+    </div>
 </td>
 <td class="date-column">
-    <div data-bind="text: date" class="grey col-text-wrapper"></div>
+    <div data-bind="text: date" class="grey"></div>
 </td>
 

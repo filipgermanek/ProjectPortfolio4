@@ -6,7 +6,7 @@
         isPostAnnotated = ko.observable(), isntPostAnnotated = ko.observable(), postAnnotationText = ko.observable(), postAnswers = ko.observableArray();
     var onPostClick = function (post) {
         //fetch post here and once its fetched change component and pass post to it
-        ds.getPost(post.link ? post.link : post.urlToPost, function(data) {
+        ds.getPost(post.isAnswer ? `http://localhost:5002/api/posts/${post.parentId}` : post.link, function(data) {
            postTitle(data.title);
             postId(data.id);
             postScore(data.score);
@@ -63,9 +63,10 @@
     }
     var searchValue = ko.observable(""), searchResults = ko.observableArray([]);
     var onSeachSubmit = function() {
-        if (searchValue() !== "") {
+        if (searchValue() !== "") { 
             searchResults([]);
             ds.searchPosts(1, searchValue(),function(data) {
+                console.log("data in search", data)
                 for(const element of data) {
                     searchResults.push(element);
                 }

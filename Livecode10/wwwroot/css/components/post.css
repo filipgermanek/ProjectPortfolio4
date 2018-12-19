@@ -1,4 +1,9 @@
-﻿.post-details-view-container {
+﻿.post-component-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.post-details-view-container {
     display: flex;
     flex-direction: row;
 }

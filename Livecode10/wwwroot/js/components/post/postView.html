@@ -1,88 +1,95 @@
-﻿<div class="post-details-view-container container">
-    <div class="container">
-        <div class="row">
+<div class="post-component-container">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <button class="btn btn-secondary" data-bind="click: selectDetailsMenu, css: { active: selectedMenu() === 'details' }">Post Details</button>
+        <button class="btn btn-secondary" data-bind="click: selectCloudMenu, css: { active: selectedMenu() === 'cloud' }">Word Cloud</button>
+    </div>
+    ﻿<div class="post-details-view-container contai "data-bind="visible: selectedMenu() === 'details'" >
+        <div class="container">
+            <div class="row">
 
-            <div class="col-sm-8">
-                <div class="section-title blue">
-                    <div class="post-title-value" data-bind="text: title"></div>
-                    <div data-bind="click: onAnnotatePostClick,css: {markedOutline: isntAnnotated, markedFilled: isAnnotated}"></div>
-                </div>
-                <div class="min-height-container">
-                    <div data-bind="text: body" class="description"></div>
-                    <div class="score-creation-info-wrapper">
-                        <div class="info-tile">
-                            <span class="tile-title">Score</span>
-                            <span data-bind="text: score" class="tile-value"></span>
-                        </div>
-                        <div class="info-tile">
-                            <span class="tile-title">creation date</span>
-                            <span data-bind="text: creationDate" class="tile-value"></span>
+                <div class="col-sm-8">
+                    <div class="section-title blue">
+                        <div class="post-title-value" data-bind="text: title"></div>
+                        <div data-bind="click: onAnnotatePostClick,css: {markedOutline: isntAnnotated, markedFilled: isAnnotated}"></div>
+                    </div>
+                    <div class="min-height-container">
+                        <div data-bind="text: body" class="description"></div>
+                        <div class="score-creation-info-wrapper">
+                            <div class="info-tile">
+                                <span class="tile-title">Score</span>
+                                <span data-bind="text: score" class="tile-value"></span>
+                            </div>
+                            <div class="info-tile">
+                                <span class="tile-title">creation date</span>
+                                <span data-bind="text: creationDate" class="tile-value"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-sm-4">
+                <div class="col-sm-4">
 
-                <div class="section-title grey" data-bind="visible: isAnnotated">My Annotation</div>
-                <div class="description" data-bind="visible: isAnnotated, text: postAnnotationText"></div>
+                    <div class="section-title grey" data-bind="visible: isAnnotated">My Annotation</div>
+                    <div class="description" data-bind="visible: isAnnotated, text: postAnnotationText"></div>
 
-                <div class="section-title grey">Tags</div>
-                <div class="buttons-wrapper min-height-container" data-bind="foreach: tags">
-                    <button class="tag-container" data-bind="text: name"></button>
+                    <div class="section-title grey">Tags</div>
+                    <div class="buttons-wrapper min-height-container" data-bind="foreach: tags">
+                        <button class="tag-container" data-bind="text: name"></button>
+                    </div>
+
                 </div>
 
             </div>
 
-        </div>
+            <div class="row">
 
-        <div class="row">
+                <div class="col-sm-8">
 
-            <div class="col-sm-8">
+                    <div class="section-title grey">Comments</div>
+                    <table class="table table-sm table-borderless">
+                        <thead>
+                            <tr>
+                                <th class="score-column">score</th>
+                                <th class="title-column">title</th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: comments">
+                            <tr>
+                                <td class="grey comment-score" data-bind="text: score"></td>
+                                <td>
+                                    <div class="blue" data-bind="text: text"></div>
+                                    <div class="grey comment-date" data-bind="text: date"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="section-title purple">Answers</div>
+                    <table class="table table-sm table-borderless">
+                        <thead>
+                            <tr>
+                                <th class="score-column">score</th>
+                                <th class="title-column">answer</th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: answers">
+                            <tr>
+                                <td class="grey comment-score">
+                                    <span data-bind="text: score"></span>
+                                    <div class="accepted-answer-mark" data-bind="visible: accepted"></div>
+                                </td>
+                                <td>
+                                    <div class="blue" data-bind="text: body"></div>
+                                    <div class="grey comment-date" data-bind="text: creationDate"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                <div class="section-title grey">Comments</div>
-                <table class="table table-sm table-borderless">
-                    <thead>
-                        <tr>
-                            <th class="score-column">score</th>
-                            <th class="title-column">title</th>
-                        </tr>
-                    </thead>
-                    <tbody data-bind="foreach: comments">
-                        <tr>
-                            <td class="grey comment-score" data-bind="text: score"></td>
-                            <td>
-                                <div class="blue" data-bind="text: text"></div>
-                                <div class="grey comment-date" data-bind="text: date"></div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="section-title purple">Answers</div>
-                <table class="table table-sm table-borderless">
-                    <thead>
-                        <tr>
-                            <th class="score-column">score</th>
-                            <th class="title-column">answer</th>
-                        </tr>
-                    </thead>
-                    <tbody data-bind="foreach: answers">
-                        <tr>
-                            <td class="grey comment-score">
-                                <span data-bind="text: score"></span>
-                                <div class="accepted-answer-mark" data-bind="visible: accepted"></div>
-                            </td>
-                            <td>
-                                <div class="blue" data-bind="text: body"></div>
-                                <div class="grey comment-date" data-bind="text: creationDate"></div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                </div>
 
             </div>
-
         </div>
-    </div>
 
+    </div>
+    <div data-bind="visible: selectedMenu() === 'cloud' ,component: { name: 'cloud', params: {postId: id}}"></div>
 </div>

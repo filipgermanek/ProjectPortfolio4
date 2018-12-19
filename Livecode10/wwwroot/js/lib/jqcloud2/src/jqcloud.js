@@ -28,8 +28,8 @@ var jQCloud = function(element, word_array, options) {
 };
 
 jQCloud.DEFAULTS = {
-    width: 100,
-    height: 100,
+    width: 500,
+    height: 250,
     center: { x: 0.5, y: 0.5 },
     steps: 10,
     delay: null,
