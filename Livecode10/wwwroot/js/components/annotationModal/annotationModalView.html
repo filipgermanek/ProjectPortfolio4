@@ -1,8 +1,11 @@
-﻿<div class="annotation-modal-view-container">
-    <h3>Mark Post</h3>
-    <textarea class="annotation-modal-textarea" placeholder="Place for your notes about this post...."></textarea>
-    <div class="annotation-modal-buttons-wrapper">
-        <button data-bind="click: onCancel" class="btn btn-secondary">Cancel</button>
-        <button data-bind="click: onSave" class="btn btn-primary annotation-modal-save-button">Save</button>
+﻿<div class="layer">
+    <div class="annotation-modal-view-container">
+        <h3 class="blue" data-bind="text: isAlreadyAnnotated() ? 'Edit Annotation' : 'Mark Post'"></h3>
+        <textarea data-bind="value: annotationText" class="annotation-modal-textarea" placeholder="Place for your notes about this post...."></textarea>
+        <div class="annotation-modal-buttons-wrapper">
+            <button data-bind="click: onCancel" class="btn btn-secondary annotation-modal-button">Cancel</button>
+            <button data-bind="visible: isAlreadyAnnotated, click: onUnmark" class="btn btn-danger annotation-modal-button">Unmark</button>
+            <button data-bind="click: onSave" class="btn btn-primary annotation-modal-button">Save</button>
+        </div>
     </div>
 </div>

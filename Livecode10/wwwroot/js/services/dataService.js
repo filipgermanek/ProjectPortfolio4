@@ -45,15 +45,53 @@
 
     var markPost = function (userId, postId, annotationText, callback) {
         var request = {
-            postId,
-            annotationText
+            postId: postId,
+            annotationText: annotationText || ""
         }
-        $.post('http://localhost:5002/api/users/' + userId + "/marked_posts", {data: request}, function (data) {
-            console.log("data in mark res", data)
-            callback(data);
-        }, 'json');
+        jQuery.ajax ({
+            url: `http://localhost:5002/api/users/${userId}/marked_posts`,
+            type: "POST",
+            data: JSON.stringify(request),
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function(res){
+                if (callback) {
+                    callback(res);
+                }
+            }
+        });
     }
 
+    var editMarkedPost = function(userId, postId, annotationText, callback) {
+         var request = {
+            annotationText: annotationText || ""
+        }
+        jQuery.ajax ({
+            url: `http://localhost:5002/api/users/${userId}/marked_posts/${postId}`,
+            type: "PUT",
+            data: JSON.stringify(request),
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function(res){
+                if (callback) {
+                    callback(res);
+                }
+            }
+        });
+    }
+    var unmarkPost = function(userId, postId, callback) {
+        jQuery.ajax ({
+            url: `http://localhost:5002/api/users/${userId}/marked_posts/${postId}`,
+            type: "DELETE",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function(res){
+                if (callback) {
+                    callback(res);
+                }
+            }
+        });
+    }
 
     return {
         getPosts,
@@ -63,6 +101,8 @@
         getUserSearchHistory,
         searchPosts,
         getAnnotatedPosts,
-        markPost
+        markPost,
+        editMarkedPost,
+        unmarkPost
     };
 });

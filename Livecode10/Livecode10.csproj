@@ -32,5 +32,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Domain\Post.cs" />
+    <Compile Remove="Domain\Data.cs" />
+    <Compile Remove="Domain\Person.cs" />
+    <Compile Remove="Controllers\PersonsController.cs" />
   </ItemGroup>
 </Project>

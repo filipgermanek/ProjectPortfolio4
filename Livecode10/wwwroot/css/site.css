@@ -84,3 +84,11 @@ h2 {
 .collapseButton {
     background-image: url('../../images/collapse.svg');
 }
+.layer {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    left: 0;
+    top: 0;
+}
