@@ -31,7 +31,6 @@
     }
 
     var searchPosts = function (userId, searchText, callback) {
-        console.log("search for", userId, searchText)
         $.getJSON('http://localhost:5002/api/posts/search/' + searchText, {contentType: 'application/json'}, function (data) {
             callback(data);
         });
