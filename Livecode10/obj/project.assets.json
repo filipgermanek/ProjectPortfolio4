@@ -11501,23 +11501,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/filipgermanek/.nuget/packages/": {},
+    "/Users/nicolaielhojnielsen/.nuget/packages/": {},
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/filipgermanek/Desktop/ProjectPortfolio4/Livecode10/Livecode10.csproj",
+      "projectUniqueName": "/Users/nicolaielhojnielsen/GitHub Kraken Projects/pp4/Livecode10/Livecode10.csproj",
       "projectName": "Livecode10",
-      "projectPath": "/Users/filipgermanek/Desktop/ProjectPortfolio4/Livecode10/Livecode10.csproj",
-      "packagesPath": "/Users/filipgermanek/.nuget/packages/",
-      "outputPath": "/Users/filipgermanek/Desktop/ProjectPortfolio4/Livecode10/obj",
+      "projectPath": "/Users/nicolaielhojnielsen/GitHub Kraken Projects/pp4/Livecode10/Livecode10.csproj",
+      "packagesPath": "/Users/nicolaielhojnielsen/.nuget/packages/",
+      "outputPath": "/Users/nicolaielhojnielsen/GitHub Kraken Projects/pp4/Livecode10/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/filipgermanek/.config/NuGet/NuGet.Config"
+        "/Users/nicolaielhojnielsen/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"

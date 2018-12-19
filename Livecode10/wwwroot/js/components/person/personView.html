@@ -3,6 +3,7 @@
         <h2 class="purple person-sectionTitle">My Profile</h2>
         <button data-bind="click: toggleProfileSection, css: {collapseButton: showProfileSection}" class="expandButton person-sectionCollapseButton"></button>
     </div>
+    
     <div class="container-fluid" data-bind="visible: showProfileSection">
         <div class="row">
 
@@ -21,17 +22,22 @@
                 <h3 class="blue" data-bind="text: email"></h3>
             </div>
 
+            <div class="col-sm">
+                <p class="remove-margin-bottom grey">CREATION DATE</p>
+                <h3 class="blue" data-bind="text: creationDate"></h3>
+            </div>
+
         </div>
     </div>
 
     <div class="container-fluid padding-bottom" data-bind="visible: showProfileSection">
         <div class="row">
-            <div class="col-sm">
-                <p class="remove-margin-bottom grey">CREATION DATE</p>
-                <h3 class="blue" data-bind="text: creationDate"></h3>
-            </div>
+
         </div>
     </div>
+
+
+
 
 </div>
 <div class="person-sectionWrapper padding-left-right">
