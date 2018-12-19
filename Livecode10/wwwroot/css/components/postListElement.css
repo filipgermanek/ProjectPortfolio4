@@ -7,7 +7,7 @@
     font-size: 11px;
     cursor: pointer;
 }
-.date-wrapper, .score-wrapper {
+.col-text-wrapper {
     padding-top: 10px;
 }
 .marked-outline, marked-filled {

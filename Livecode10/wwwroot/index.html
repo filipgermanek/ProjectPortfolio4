@@ -7,29 +7,36 @@
     <link href="css/site.css" rel="stylesheet" />
 </head>
 <body>  
-    <div class="container-fluid">
+    <div class="container-fluid root-wraper">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="navbar-brand" data-bind="click: navigateHome"></div>
 
-            <form class="form-inline my-2 my-lg-0">
+            <form data-bind="submit: onSeachSubmit" class="form-inline my-2 my-lg-0">
                 <input
-                    data-bind="value: searchValue, event: {keypress: onSearchInputClick}"
-                    class="form-control mr-sm-2 search-input" type="search" placeholder="Search" aria-label="Search">
+                    data-bind="value: searchValue"
+                    class="form-control mr-sm-2 search-input" type="search" placeholder="Search for posts here..." aria-label="Search">
 
             </form>
             <button class="profile-button" data-bind="click: navigateToUserProfile">My Profile</button>
         </nav>
-        <div data-bind="component: { name: selectedComponent,
+        <div class="post-table-component-wrapper" data-bind="component: { name: selectedComponent,
             params: {onPostClick: onPostClick,
+                    onAnnotatePostClick: onAnnotatePostClick,
                     postTitle: postTitle,
                     postScore,
                     postBody,
                     postCreationDate,
                     postComments,
                     postTags,
+                    postAnswers,
                     isPostAnnotated,
-                    postAnnotationText}}"
+                    postAnnotationText,
+                    searchResults}}"
         ></div>
+        <div data-bind="if: showModal">
+            <div data-bind="component: {name: selectedModal, params: {postId: annotateToPostId, postTitle:annotateToPostTitle, closeModal: closeModal}}"></div>
+        </div>
+
         <script data-main="js/main.js" src="js/lib/requirejs/require.js"></script>
     </div>
 </body>

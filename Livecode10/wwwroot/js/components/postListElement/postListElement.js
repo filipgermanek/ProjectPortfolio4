@@ -1,5 +1,6 @@
 ﻿define(['knockout', 'postman'], function (ko, postman) {
     return function (params) {
+        var id = params.post.id;
         var title = params.post.title;
         var score = params.post.score;
         var d = new Date(params.post.creationDate);
@@ -7,7 +8,8 @@
         var date = d ? d.getDate() + "-" + d.getMonth() + "-" + d.getFullYear() : '';
         var onPostClick = params.onPostClick;
         return {
-              score,
+            id,
+            score,
             title,
             date,
             link,

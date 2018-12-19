@@ -15,8 +15,25 @@
     padding-left: 16px;
     padding-right: 16px;
 }
+.margin-left-right {
+    margin-left: 16px;
+    padding-right: 16px;
+}
 
 .padding-bottom {
     padding-bottom: 16px;
 }
 
+.person-sectionWrapper {
+    display: flex;
+    flex-direction: row;
+}
+.person-sectionTitle {
+    border-bottom: 1px solid #F8F9FA;
+}
+.person-sectionCollapseButton {
+    margin-left: 10px;
+}
+.marked-post-title {
+    cursor: pointer;
+}

@@ -1,0 +1,3 @@
+﻿<div data-bind="foreach: pages" class="post-list-pages-wrapper">
+    <button data-bind="text: $data, click: $parent.onPageNumberClick, css: { activePage: $parent.currentPage() + 1 === $data }" class="post-list-page-button"></button>
+</div>

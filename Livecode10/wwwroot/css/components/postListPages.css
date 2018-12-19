@@ -1,0 +1,19 @@
+﻿.post-list-pages-wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.post-list-page-button {
+    margin-left: 3px;
+    background: white;
+    border: none;
+    font-size: 12px;
+    color: #009DFF;
+    cursor: pointer;
+}
+.activePage {
+    color: black;
+}

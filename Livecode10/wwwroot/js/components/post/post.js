@@ -3,13 +3,15 @@
         var title = params.postTitle;
         var score = params.postScore;
         var body = params.postBody;
-        var dateRaw = new Date(params.postCreationDate);
-console.log("dateRaw", dateRaw, "cr", params.postCreationDate)
+        var dateRaw = new Date(params.postCreationDate());
         var creationDate = dateRaw.getDate() + "/" + dateRaw.getMonth() + "/" + dateRaw.getFullYear()
         var comments = params.postComments;
         var tags = params.postTags;
+        var answers = params.postAnswers;
         var isAnnotated = params.isPostAnnotated;
+        var isntAnnotated = !params.isPostAnnotated();
         var postAnnotationText = params.postAnnotationText;
+        console.log("answers", answers())
         return {
             title,
             score,
@@ -18,7 +20,9 @@ console.log("dateRaw", dateRaw, "cr", params.postCreationDate)
             comments,
             tags,
             isAnnotated,
-            postAnnotationText
+            postAnnotationText,
+            answers,
+            isntAnnotated
         };
     };
 });

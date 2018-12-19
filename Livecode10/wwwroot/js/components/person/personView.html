@@ -1,51 +1,79 @@
 ﻿<div class="padding-left-right">
-
-<h2 class="purple">My Profile</h2>
-<hr class="remove-margin-top">
-
-<div class="container-fluid">
-    <div class="row">
-
-        <div class="col-sm padding-bottom">
-            <p class="remove-margin-bottom grey">USERNAME</p>
-            <h3 class="blue" data-bind="text: name"></h3>
-        </div>
-
-        <div class="col-sm padding-bottom">
-            <p class="remove-margin-bottom grey">LOCATION</p>
-            <h3 class="blue" data-bind="text: location" ></h3>
-        </div>
-
-        <div class="col-sm padding-bottom">
-            <p class="remove-margin-bottom grey">EMAIL</p>
-            <h3 class="blue" data-bind="text: email"></h3>
-        </div>
-
+    <div class="person-sectionWrapper">
+        <h2 class="purple person-sectionTitle">My Profile</h2>
+        <button data-bind="click: toggleProfileSection, css: {collapseButton: showProfileSection}" class="expandButton person-sectionCollapseButton"></button>
     </div>
-</div>
+    <div class="container-fluid" data-bind="visible: showProfileSection">
+        <div class="row">
 
-<div class="container-fluid padding-bottom">
-    <div class="row">
-        <div class="col-sm">
-            <p class="remove-margin-bottom grey">CREATION DATE</p>
-            <h3 class="blue" data-bind="text: creationDate"></h3>
+            <div class="col-sm padding-bottom">
+                <p class="remove-margin-bottom grey">USERNAME</p>
+                <h3 class="blue" data-bind="text: name"></h3>
+            </div>
+
+            <div class="col-sm padding-bottom">
+                <p class="remove-margin-bottom grey">LOCATION</p>
+                <h3 class="blue" data-bind="text: location"></h3>
+            </div>
+
+            <div class="col-sm padding-bottom">
+                <p class="remove-margin-bottom grey">EMAIL</p>
+                <h3 class="blue" data-bind="text: email"></h3>
+            </div>
+
         </div>
     </div>
-</div>
+
+    <div class="container-fluid padding-bottom" data-bind="visible: showProfileSection">
+        <div class="row">
+            <div class="col-sm">
+                <p class="remove-margin-bottom grey">CREATION DATE</p>
+                <h3 class="blue" data-bind="text: creationDate"></h3>
+            </div>
+        </div>
+    </div>
 
 </div>
-
-
-
-
-<div data-bind="component: {name: postListName, params:{onPostClick: onPostClick, userId: 1}}">
-
-
+<div class="person-sectionWrapper padding-left-right">
+    <h2 class="purple person-sectionTitle">My Search History</h2>
+    <button data-bind="click: toggleSearchHistorySection, css: {collapseButton: showSearchHistorySection}" class="expandButton person-sectionCollapseButton"></button>
 </div>
+<!-- search history -->
+<table class="table table-sm table-borderless margin-left-right" data-bind="visible: showSearchHistorySection">
+    <thead>
+        <tr>
+            <th>Value</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: searchHistory">
+        <tr>
+            <td class="blue" data-bind="text: $data.searchtext"></td>
+            <td class="grey" data-bind="text: $data.creationDate"></td>
+        </tr>
+    </tbody>
+</table>
+<div class="person-sectionWrapper padding-left-right">
+    <h2 class="purple person-sectionTitle">Marked Posts</h2>
+    <button data-bind="click: toggleMarkedPostSection, css: {collapseButton: showMarkedPostsSection}" class="expandButton person-sectionCollapseButton"></button>
+</div>
+<table class="table table-sm table-borderless margin-left-right" data-bind="visible: showMarkedPostsSection">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: markedPosts">
+        <tr>
+            <td class="marked-post-title blue" data-bind="text: $data.postTitle, click: $parent.onPostClick"></td>
+            <td>
+                <button class="btn btn-sm btn-primary" data-bind="click: $parent.editMarkedPost">Edit</button>
+                <button class="btn btn-sm btn-secondary" data-bind="click: $parent.unmarkPost">Unmark</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<!--<div data-bind="component: {name: postListName, params:{onPostClick: onPostClick, userId: 1}}">
 
-
-
-
-
-
-
+</div>-->

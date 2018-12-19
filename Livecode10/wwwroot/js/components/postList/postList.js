@@ -2,23 +2,39 @@
     return function(params) {
         var posts = ko.observableArray();
         var currentComponent = ko.observable("post-list-element");
-        console.log("params in list", params)
+        var currentPage = ko.observable(0);
+        var lastPage = ko.observable();
+        var showPages = params.userId === undefined || params.userId === null;
         if (params.userId) {
              ds.getAnnotatedPosts(params.userId, function(data) {
-                console.log("data", data);
                 posts(data.items);
             });
         } else {
-             ds.getPosts(function(data) {
+             ds.getPosts(currentPage(), function(data) {
                 posts(data.items);
+                lastPage(data.numberOfPages);
+             });
+        }
+        
+       
+        var postListPages = ko.observable("post-list-pages");
+        var onPageNumberClick = function (number) {
+            currentPage(number - 1);
+            ds.getPosts(currentPage(), function(data) {
+                posts(data.items);
+                lastPage(data.numberOfPages);
             });
         }
-       
         var onPostClick = params.onPostClick;
         return {
             posts,
             onPostClick,
-            currentComponent
+            currentComponent,
+            currentPage,
+            lastPage,
+            onPageNumberClick,
+            postListPages,
+            showPages
         };
     };
 });
