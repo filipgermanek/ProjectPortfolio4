@@ -1,6 +1,6 @@
 ﻿define(['knockout', 'postman', 'dataService'], function (ko, postman, ds) { 
     
-    var selectedComponent = ko.observable("post-list");
+    var showLoader = ko.observable(false), selectedComponent = ko.observable("post-list");
     var postId = ko.observable(), postTitle = ko.observable(), postScore = ko.observable() , postBody = ko.observable(),
         postCreationDate = ko.observable(), postComments = ko.observableArray(), postTags = ko.observableArray(),
         isPostAnnotated = ko.observable(), isntPostAnnotated = ko.observable(), postAnnotationText = ko.observable(), postAnswers = ko.observableArray();
@@ -63,13 +63,15 @@
     }
     var searchValue = ko.observable(""), searchResults = ko.observableArray([]);
     var onSeachSubmit = function() {
-        if (searchValue() !== "") { 
+        if (searchValue() !== "") {
+            showLoader(true);
             searchResults([]);
             ds.searchPosts(1, searchValue(),function(data) {
                 console.log("data in search", data)
                 for(const element of data) {
                     searchResults.push(element);
                 }
+                showLoader(false);
                 selectedComponent("search-results");
             });
         }
@@ -127,6 +129,7 @@
         onUnmarkPost,
         showModal,
         closeModal,
-        searchResults
+        searchResults,
+        showLoader
     };
 });
