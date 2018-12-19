@@ -1,8 +1,7 @@
 ﻿define(['jquery'], function ($) {
 
-    var getPosts = function (callback) {
-        $.getJSON('http://localhost:5002/api/posts', {contentType: 'application/json'}, function (data) {
-            console.log("data posts", data)
+    var getPosts = function (page, callback) {
+        $.getJSON(`http://localhost:5002/api/posts?pageSize=10&page=${page}`, {contentType: 'application/json'}, function (data) {
             callback(data);
         });
     };
@@ -14,7 +13,6 @@
     }
 
     var getUser = function (userId, callback) {
-console.log("getting user", userId);
         $.getJSON('http://localhost:5002/api/users/' + userId, {contentType: 'application/json'}, function (data) {
             callback(data);
         });
@@ -27,13 +25,14 @@ console.log("getting user", userId);
     }
 
     var getUserSearchHistory = function (userId, callback) {
-        $.getJSON('http://localhost:5002/api/users/' + userId + 'search_history', {contentType: 'application/json'}, function (data) {
+        $.getJSON('http://localhost:5002/api/users/' + userId + '/search_history', {contentType: 'application/json'}, function (data) {
             callback(data);
         });
     }
 
-    var searchPosts = function (userId, callback) {
-        $.getJSON('http://localhost:5002/api/posts/' + searchText, {contentType: 'application/json'}, function (data) {
+    var searchPosts = function (userId, searchText, callback) {
+        console.log("search for", userId, searchText)
+        $.getJSON('http://localhost:5002/api/posts/search/' + searchText, {contentType: 'application/json'}, function (data) {
             callback(data);
         });
     }
@@ -44,6 +43,17 @@ console.log("getting user", userId);
         });
     }
 
+    var markPost = function (userId, postId, annotationText, callback) {
+        var request = {
+            postId,
+            annotationText
+        }
+        $.post('http://localhost:5002/api/users/' + userId + "/marked_posts", {data: request}, function (data) {
+            console.log("data in mark res", data)
+            callback(data);
+        }, 'json');
+    }
+
 
     return {
         getPosts,
@@ -52,6 +62,7 @@ console.log("getting user", userId);
         getPostTags,
         getUserSearchHistory,
         searchPosts,
-        getAnnotatedPosts
+        getAnnotatedPosts,
+        markPost
     };
 });

@@ -6,7 +6,7 @@
         isPostAnnotated = ko.observable(), postAnnotationText = ko.observable();
     var onPostClick = function (post) {
         //fetch post here and once its fetched change component and pass post to it
-        ds.getPost(post.link, function(data) {
+        ds.getPost(post.link ? post.link : post.urlToPost, function(data) {
            postTitle(data.title);
             postScore(data.score);
             postBody(data.body);
@@ -19,35 +19,64 @@
             }
             isPostAnnotated(data.isAnnotated);
             postAnnotationText(data.annotationText);
-            console.log("isPostAnnotated", isPostAnnotated)
            selectedComponent("post");
         });
-
+        searchValue("");
+        searchResults([]);
+    }
+    var showModal = ko.observable(false);
+    var selectedModal = ko.observable("");
+    var annotateToPostId = ko.observable();
+    var annotateToPostTitle = ko.observable();
+    var onAnnotatePostClick = function(post) {
+        selectedModal("annotation-modal");
+        annotateToPostId(post.id);
+        annotateToPostTitle(post.title);
+        showModal(true);
     }
     var navigateHome = function () {
         postComments([])
         postTags([])
         selectedComponent("post-list");
+        searchValue("");
+        searchResults([]);
     }
     var navigateToUserProfile = function() {
         postComments([])
         postTags([])
-        selectedComponent('person')
+        selectedComponent('person');
+        searchValue("");
+        searchResults([]);
     }
-    var searchValue = ko.observable("test");
-    var onSearchInputClick = function(d, e) {
-        if (e.keyCode === 13) {
-            console.log("enter", d, e)
+    var searchValue = ko.observable(""), searchResults = ko.observableArray([]);
+    var onSeachSubmit = function() {
+        if (searchValue() !== "") {
+            searchResults([]);
+            ds.searchPosts(1, searchValue(),function(data) {
+                console.log("result of search", data)
+                for(const element of data) {
+                    searchResults.push(element);
+                }
+                selectedComponent("search-results");
+            });
         }
+    }
+    var closeModal = function() {
+        showModal(false);
+        selectedModal("");
+        annotateToPostId(null);
+        annotateToPostTitle(null);
+
     }
 
     return {
         selectedComponent,
         onPostClick,
+        onAnnotatePostClick,
         navigateHome,
         selectedComponent,
         navigateToUserProfile,
-        onSearchInputClick,
+        onSeachSubmit,
         searchValue,
         postTitle,
         postScore,
@@ -56,6 +85,12 @@
         postComments,
         postTags,
         isPostAnnotated,
-        postAnnotationText
+        postAnnotationText,
+        selectedModal,
+        annotateToPostId,
+        annotateToPostTitle,
+        showModal,
+        closeModal,
+        searchResults
     };
 });

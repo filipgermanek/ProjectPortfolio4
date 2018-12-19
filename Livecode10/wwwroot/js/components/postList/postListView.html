@@ -1,15 +1,17 @@
-﻿<div class="post-table-wrapper container remove-margin-sites">
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th class="score-column">score</th>
-                <th class="title-column">title</th>
-                <th class="date-column">date</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody data-bind="foreach: posts">
-            <tr data-bind="component: { name: $parent.currentComponent, params: {post: $data, onPostClick: $parent.onPostClick}}" class="post-list-element-row"></tr>
-        </tbody>
-    </table>
+﻿<div class="container-fluid remove-margin-sites post-table-component-wrapper">
+    <div class="post-table-wrapper">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="score-column">score</th>
+                    <th class="title-column">title</th>
+                    <th class="date-column">date</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: posts">
+                <tr data-bind="component: { name: $parent.currentComponent, params: {post: $data, onPostClick: $parent.onPostClick, onAnnotatePostClick: $parent.onAnnotatePostClick}}" class="post-list-element-row"></tr>
+            </tbody>
+        </table>
+    </div>
+    <div data-bind="visible: showPages, component: {name: postListPages, params: {onPageNumberClick: onPageNumberClick, currentPage: currentPage, lastPage: lastPage}}"></div>
 </div>

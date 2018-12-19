@@ -2,10 +2,8 @@
     <div class="col-8">
         <div class="section-title blue">
             <div class="post-title-value" data-bind="text: title"></div>
-            <div data-bind="visible: !isAnnotated" class="marked-outline"></div>
-            <div data-bind="visible: isAnnotated" class="marked-filled"></div>
+            <div data-bind="css: {markedOutline: !isAnnotated, markedFilled: isAnnotated}"></div>
         </div>
-
         <div class="min-height-container">
             <div data-bind="text: body" class="description"></div>
             <div class="score-creation-info-wrapper">
@@ -22,7 +20,7 @@
         <div class="section-title purple">
             Comments
         </div>
-        <table class="table table-striped table-borderless">
+        <table class="table table-sm table-borderless">
             <thead>
                 <tr>
                     <th class="score-column">score</th>

@@ -99,8 +99,18 @@ require(['knockout'], function(ko) {
         viewModel: {require: 'components/post/post'},
         template: {require: 'text!components/post/postView.html'}
         });
-
-
+    ko.components.register("annotation-modal", {
+        viewModel: {require: 'components/annotationModal/annotationModal'},
+        template: {require: 'text!components/annotationModal/annotationModalView.html'}
+    });
+    ko.components.register("post-list-pages", {
+        viewModel: {require: 'components/postListPages/postListPages'},
+        template: {require: 'text!components/postListPages/postListPagesView.html'}
+        });
+    ko.components.register("search-results", {
+        viewModel: {require: 'components/searchResults/searchResults'},
+        template: {require: 'text!components/postList/postListView.html'}
+        });
    
 });
 

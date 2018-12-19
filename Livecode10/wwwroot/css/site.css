@@ -1,4 +1,8 @@
 ﻿@import url("components/components.css");
+.root-wraper {
+    height: 100%;
+    overflow: hidden;
+}
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -47,17 +51,21 @@
     color: #646464;
 }
 
-.marked-outline, .marked-filled {
+.marked-outline, .marked-filled, .markedOutline, .markedFilled {
     width: 32px;
     height: 32px;
+    cursor: pointer;
 }
 
-.marked-outline {
+.marked-outline, .markedOutline {
     background-image: url('../../images/outline-star.svg');
     background-size: contain;
 }
 
-.marked-filled {
+.marked-filled, .markedFilled {
     background-image: url('../../images/filled-star.svg');
     background-size: contain;
+}
+h2 {
+    font-size: 24px;
 }

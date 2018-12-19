@@ -17,6 +17,9 @@
     <Folder Include="wwwroot\css\components\" />
     <Folder Include="wwwroot\js\components\tags\" />
     <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\js\components\annotationModal\" />
+    <Folder Include="wwwroot\js\components\postListPages\" />
+    <Folder Include="wwwroot\js\components\searchResults\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,6 +27,8 @@
     <Content Remove="wwwroot\js\components\commentListElement\commentListElement.js" />
     <Content Remove="wwwroot\images\outline-star.svg" />
     <Content Remove="wwwroot\images\filled-star.svg" />
+    <Content Remove="wwwroot\js\components\postListPages\postListPages.css" />
+    <Content Remove="wwwroot\js\components\postListPages\postListPagesView.css" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Domain\Post.cs" />
