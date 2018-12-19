@@ -53,7 +53,7 @@
             showMarkedPostsSection(newValue);
         };
         var showProfileSection = ko.observable(true),
-            showSearchHistorySection = ko.observable(true),
+            showSearchHistorySection = ko.observable(false),
             showMarkedPostsSection = ko.observable(true);
         return {
             onPostClick,

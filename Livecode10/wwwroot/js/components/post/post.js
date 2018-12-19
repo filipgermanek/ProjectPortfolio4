@@ -7,9 +7,11 @@
         var creationDate = dateRaw.getDate() + "/" + dateRaw.getMonth() + "/" + dateRaw.getFullYear()
         var comments = params.postComments;
         var tags = params.postTags;
+        var answers = params.postAnswers;
         var isAnnotated = params.isPostAnnotated;
+        var isntAnnotated = !params.isPostAnnotated();
         var postAnnotationText = params.postAnnotationText;
-        console.log("isAnnotated", isAnnotated())
+        console.log("answers", answers())
         return {
             title,
             score,
@@ -18,7 +20,9 @@
             comments,
             tags,
             isAnnotated,
-            postAnnotationText
+            postAnnotationText,
+            answers,
+            isntAnnotated
         };
     };
 });

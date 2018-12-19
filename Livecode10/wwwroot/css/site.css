@@ -69,3 +69,18 @@
 h2 {
     font-size: 24px;
 }
+.expandButton, .collapseButton {
+    height: 26px;
+    width: 26px;
+    border: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.expandButton {
+    background-image: url('../../images/expand.svg');
+}
+
+.collapseButton {
+    background-image: url('../../images/collapse.svg');
+}

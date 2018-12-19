@@ -3,7 +3,7 @@
     var selectedComponent = ko.observable("post-list");
     var postTitle = ko.observable(), postScore = ko.observable() , postBody = ko.observable(),
         postCreationDate = ko.observable(), postComments = ko.observableArray(), postTags = ko.observableArray(),
-        isPostAnnotated = ko.observable(), postAnnotationText = ko.observable();
+        isPostAnnotated = ko.observable(), postAnnotationText = ko.observable(), postAnswers = ko.observableArray();
     var onPostClick = function (post) {
         //fetch post here and once its fetched change component and pass post to it
         ds.getPost(post.link ? post.link : post.urlToPost, function(data) {
@@ -15,7 +15,10 @@
                 postComments.push(comment);
             }
             for (var tag of data.tags) {
-                postTags.push(tag)
+                postTags.push(tag);
+            }
+            for (var answer of data.answers) {
+                postAnswers.push(answer);
             }
             isPostAnnotated(data.isAnnotated);
             postAnnotationText(data.annotationText);
@@ -84,6 +87,7 @@
         postCreationDate,
         postComments,
         postTags,
+        postAnswers,
         isPostAnnotated,
         postAnnotationText,
         selectedModal,

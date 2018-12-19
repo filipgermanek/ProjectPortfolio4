@@ -1,7 +1,7 @@
 ﻿<div class="padding-left-right">
     <div class="person-sectionWrapper">
         <h2 class="purple person-sectionTitle">My Profile</h2>
-        <button data-bind="click: toggleProfileSection, text: showProfileSection() ? 'Hide' : 'Show'" class="btn btn-dark btn-sm person-sectionCollapseButton"></button>
+        <button data-bind="click: toggleProfileSection, css: {collapseButton: showProfileSection}" class="expandButton person-sectionCollapseButton"></button>
     </div>
     <div class="container-fluid" data-bind="visible: showProfileSection">
         <div class="row">
@@ -36,21 +36,28 @@
 </div>
 <div class="person-sectionWrapper padding-left-right">
     <h2 class="purple person-sectionTitle">My Search History</h2>
-    <button data-bind="click: toggleSearchHistorySection, text: showSearchHistorySection() ? 'Hide' : 'Show'" class="btn btn-dark btn-sm person-sectionCollapseButton">Hide</button>
+    <button data-bind="click: toggleSearchHistorySection, css: {collapseButton: showSearchHistorySection}" class="expandButton person-sectionCollapseButton"></button>
 </div>
 <!-- search history -->
-<ul class="user-search-history-list" data-bind="foreach: searchHistory, visible: showSearchHistorySection">
-    <li class="user-search-history-list-element">
-        <span data-bind="text: $data.searchtext" class="user-search-history-list-element-text"></span>
-        (<span data-bind="text: $data.creationDate" class="user-search-history-list-element-date grey"></span>)
-    </li>
-</ul>
-<!-- marked posts -->
+<table class="table table-sm table-borderless margin-left-right" data-bind="visible: showSearchHistorySection">
+    <thead>
+        <tr>
+            <th>Value</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: searchHistory">
+        <tr>
+            <td class="blue" data-bind="text: $data.searchtext"></td>
+            <td class="grey" data-bind="text: $data.creationDate"></td>
+        </tr>
+    </tbody>
+</table>
 <div class="person-sectionWrapper padding-left-right">
     <h2 class="purple person-sectionTitle">Marked Posts</h2>
-    <button data-bind="click: toggleMarkedPostSection, text: showMarkedPostsSection() ? 'Hide' : 'Show'" class="btn btn-dark btn-sm person-sectionCollapseButton">Hide</button>
+    <button data-bind="click: toggleMarkedPostSection, css: {collapseButton: showMarkedPostsSection}" class="expandButton person-sectionCollapseButton"></button>
 </div>
-<table class="table table-sm" data-bind="visible: showMarkedPostsSection">
+<table class="table table-sm table-borderless margin-left-right" data-bind="visible: showMarkedPostsSection">
     <thead>
         <tr>
             <th>Title</th>
@@ -59,7 +66,7 @@
     </thead>
     <tbody data-bind="foreach: markedPosts">
         <tr>
-            <td class="marked-post-title" data-bind="text: $data.postTitle, click: $parent.onPostClick"></td>
+            <td class="marked-post-title blue" data-bind="text: $data.postTitle, click: $parent.onPostClick"></td>
             <td>
                 <button class="btn btn-sm btn-primary" data-bind="click: $parent.editMarkedPost">Edit</button>
                 <button class="btn btn-sm btn-secondary" data-bind="click: $parent.unmarkPost">Unmark</button>

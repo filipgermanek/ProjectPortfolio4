@@ -52,5 +52,12 @@
 .comment-date {
     font-size: 10px;
 }
+.accepted-answer-mark {
+    height: 16px;
+    width: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../../images/check.svg');
+}
 
 
