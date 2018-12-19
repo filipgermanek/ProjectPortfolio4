@@ -1,4 +1,4 @@
-﻿define(['knockout', 'dataService', 'postman'], function(ko, ds, postman) {
+﻿define(['knockout', 'dataService'], function(ko, ds) {
     return function(params) {
         var posts = ko.observableArray();
         var currentComponent = ko.observable("post-list-element");

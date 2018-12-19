@@ -93,6 +93,12 @@
         });
     }
 
+    var getWordsCountForPost = function(postId, callback) {
+         $.getJSON('http://localhost:5002/api/posts/' + postId + '/words_count', {contentType: 'application/json'}, function (data) {
+            callback(data);
+        });
+    }
+
     return {
         getPosts,
         getPost,
@@ -103,6 +109,7 @@
         getAnnotatedPosts,
         markPost,
         editMarkedPost,
-        unmarkPost
+        unmarkPost,
+        getWordsCountForPost
     };
 });
