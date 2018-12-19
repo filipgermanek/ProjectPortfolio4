@@ -6,7 +6,7 @@
         var lastPage = ko.observable(null);
         var showPages = false;
         var onPostClick = params.onPostClick;
-        var postListPages = "post-list-pages" , onPageNumberClick = null, currentPage = ko.observable(0), lastPage = ko.observable(0);
+        var postListPages = "post-list-pages" , onPageNumberClick = null, currentPage = ko.observable(0), lastPage = ko.observable(0), pages = ko.observableArray();
         return {
             posts,
             onPostClick,
@@ -15,7 +15,8 @@
             postListPages,
             onPageNumberClick,
             currentPage,
-            lastPage
+            lastPage,
+            pages
         };
     };
 });

@@ -5,16 +5,16 @@ define(['jquery', 'knockout', 'dataService', 'postman', 'jqcloud'], function ($,
         // just added some elements to the array so we can
         // get the binding to work
         var words = ko.observableArray([
-            { text: "A", weight: 13 },
-            { text: "B", weight: 10.5 }]);
+            { text: "A", weight: 13},
+            { text: "B", weight: 10.5}]);
 
         // to be able to use a asynchronous functon call
         // we need to implement updates on the cloud, since
         // the data will first be available after the creation
         // of the cloud
-        ds.getWords(function(data) {
-            words(data);
-        });
+       // ds.getWords(function(data) {
+       //     words(data);
+      //  });
 
         var goToPersonList = function() {
             postman.publish("changeMenu", "Persons");

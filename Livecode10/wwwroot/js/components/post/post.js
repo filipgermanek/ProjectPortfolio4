@@ -13,7 +13,13 @@
         var isntAnnotated = params.isntPostAnnotated;
         var postAnnotationText = params.postAnnotationText();
         var onAnnotatePostClick = params.onAnnotatePostClick;
-        console.log("isannot", isAnnotated());
+        var selectedMenu = ko.observable("details");
+        var selectDetailsMenu = function() {
+            selectedMenu("details");
+        }
+        var selectCloudMenu = function(data) {
+            selectedMenu("cloud");
+        }
         return {
             id,
             title,
@@ -26,7 +32,10 @@
             postAnnotationText,
             answers,
             isntAnnotated,
-            onAnnotatePostClick
+            onAnnotatePostClick,
+            selectedMenu,
+            selectDetailsMenu,
+            selectCloudMenu
         };
     };
 });

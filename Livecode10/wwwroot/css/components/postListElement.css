@@ -7,10 +7,18 @@
     font-size: 11px;
     cursor: pointer;
 }
-.col-text-wrapper {
-    padding-top: 10px;
-}
+
 .marked-outline, marked-filled {
     margin-top: 3px;
+}
+.title-column-values-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.isAnswer-indicator {
+    margin-left: 8px;
+    font-size: 12px;
+    font-weight: 500;
 }
 

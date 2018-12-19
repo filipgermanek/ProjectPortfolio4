@@ -1,5 +1,7 @@
 ﻿define(['knockout', 'postman'], function (ko, postman) {
     return function (params) {
+        var isAnswer = params.post.parentId !== null && params.post.parentId !== undefined;
+        var parentId = params.post.parentId;
         var id = params.post.id;
         var title = params.post.title;
         var score = params.post.score;
@@ -9,11 +11,13 @@
         var onPostClick = params.onPostClick;
         return {
             id,
+            parentId,
             score,
             title,
             date,
             link,
-            onPostClick
+            onPostClick,
+            isAnswer
         };
     };
 });
